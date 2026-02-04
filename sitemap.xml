@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+<url><loc>https://YOUR-NETLIFY-DOMAIN/</loc></url>
+<url><loc>https://YOUR-NETLIFY-DOMAIN/blog.html</loc></url>
+<url><loc>https://YOUR-NETLIFY-DOMAIN/about.html</loc></url>
+<url><loc>https://YOUR-NETLIFY-DOMAIN/contact.html</loc></url>
+<url><loc>https://YOUR-NETLIFY-DOMAIN/privacy.html</loc></url>
+<url><loc>https://YOUR-NETLIFY-DOMAIN/terms.html</loc></url>
+<url><loc>https://YOUR-NETLIFY-DOMAIN/disclaimer.html</loc></url>
+
+</urlset>

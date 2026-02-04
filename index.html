@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SmartTools AI – Free Online Calculators & Tools</title>
+<meta name="description" content="Use 50+ free online calculators including Age, Period, BMI, Loan, Love Calculator. Fast, accurate, free.">
+
+<!-- Google site verification (replace with your code) -->
+<meta name="google-site-verification" content="PASTE_CODE_HERE">
+
+<!-- ADSENSE (replace YOUR-ADSENSE-CODE with your code) -->
+<script async 
+src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=YOUR-ADSENSE-CODE"
+crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+<h1>SmartTools AI</h1>
+<p>50+ Free Calculators & Smart Tools</p>
+<nav>
+<a href="index.html">Home</a>
+<a href="blog.html">Blog</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+</nav>
+</header>
+
+<div class="container">
+
+<!-- AGE CALCULATOR -->
+<div class="tool">
+<h2>Age Calculator</h2>
+<input type="date" id="dob">
+<button onclick="calculateAge()">Calculate</button>
+<p id="ageResult"></p>
+</div>
+
+<!-- PERIOD CALCULATOR -->
+<div class="tool">
+<h2>Period Calculator</h2>
+<input type="date" id="lastPeriod">
+<input type="number" id="cycleLength" placeholder="Cycle Length (28)">
+<button onclick="calculatePeriod()">Predict</button>
+<p id="periodResult"></p>
+</div>
+
+<!-- BMI CALCULATOR -->
+<div class="tool">
+<h2>BMI Calculator</h2>
+<input type="number" id="weight" placeholder="Weight kg">
+<input type="number" id="height" placeholder="Height cm">
+<button onclick="calculateBMI()">Calculate BMI</button>
+<p id="bmiResult"></p>
+</div>
+
+<!-- LOAN EMI CALCULATOR -->
+<div class="tool">
+<h2>Loan EMI Calculator</h2>
+<input type="number" id="loanAmount" placeholder="Loan Amount">
+<input type="number" id="interestRate" placeholder="Interest %">
+<input type="number" id="loanYears" placeholder="Years">
+<button onclick="calculateLoan()">Calculate EMI</button>
+<p id="loanResult"></p>
+</div>
+
+</div>
+
+<footer>
+<p>© 2026 SmartTools AI</p>
+<a href="privacy.html">Privacy</a> | 
+<a href="terms.html">Terms</a> | 
+<a href="disclaimer.html">Disclaimer</a>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
