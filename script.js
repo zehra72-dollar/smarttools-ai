@@ -1,93 +1,132 @@
-// 1. Age Calculator
-function calculateAge(){
-let dob = new Date(document.getElementById('dob').value);
-let now = new Date();
-let diff = now - dob;
-let years = Math.floor(diff / (1000*60*60*24*365.25));
-let months = Math.floor(diff / (1000*60*60*24*30.44));
-let days = Math.floor(diff / (1000*60*60*24));
-let hours = Math.floor(diff / (1000*60*60));
-let minutes = Math.floor(diff / (1000*60));
-let seconds = Math.floor(diff / 1000);
-document.getElementById('ageResult').innerText=
-`You are ${years} years, ${months} months, ${days} days, ${hours} hours, ${minutes} minutes, ${seconds} seconds old.`;
+// Loan EMI
+function calcEMI(){
+ let P = parseFloat(document.getElementById('loanAmount').value);
+ let r = parseFloat(document.getElementById('loanRate').value)/1200;
+ let n = parseInt(document.getElementById('loanYears').value)*12;
+ if(P && r && n){
+ let emi = P*r*Math.pow(1+r,n)/(Math.pow(1+r,n)-1);
+ document.getElementById('emiResult').innerText = `Monthly EMI: $${emi.toFixed(2)}`;
+ } else { document.getElementById('emiResult').innerText="Please fill all fields";}
 }
 
-// 2. Period Calculator
-function calculatePeriod(){
-let last = new Date(document.getElementById('lastPeriod').value);
-let cycle = parseInt(document.getElementById('cycleLength').value) || 28;
-last.setDate(last.getDate() + cycle);
-document.getElementById('periodResult').innerText =
-`Next period expected on: ${last.toDateString()}`;
+// Mortgage
+function calcMortgage(){
+ let P = parseFloat(document.getElementById('mortgageAmount').value);
+ let r = parseFloat(document.getElementById('mortgageRate').value)/1200;
+ let n = parseInt(document.getElementById('mortgageYears').value)*12;
+ if(P && r && n){
+ let emi = P*r*Math.pow(1+r,n)/(Math.pow(1+r,n)-1);
+ let total = emi*n;
+ document.getElementById('mortgageResult').innerText = `Monthly: $${emi.toFixed(2)}, Total Payment: $${total.toFixed(2)}`;
+ } else { document.getElementById('mortgageResult').innerText="Please fill all fields";}
 }
 
-// 3. BMI
-function calculateBMI(){
-let w=parseFloat(document.getElementById('weight').value);
-let h=parseFloat(document.getElementById('height').value)/100;
-let bmi=(w/(h*h)).toFixed(2);
-let cat=bmi<18.5?'Underweight':bmi<24.9?'Normal':bmi<29.9?'Overweight':'Obese';
-document.getElementById('bmiResult').innerText=`BMI: ${bmi} (${cat})`;
+// Salary
+function calcSalary(){
+ let s = parseFloat(document.getElementById('salary').value);
+ if(s){ document.getElementById('salaryResult').innerText = `Yearly Salary: $${(s*12).toFixed(2)}`;}
+ else {document.getElementById('salaryResult').innerText="Enter salary";}
 }
 
-// 4. Loan EMI
-function calculateLoan(){
-let P=parseFloat(document.getElementById('loanAmount').value);
-let r=parseFloat(document.getElementById('interestRate').value)/1200;
-let n=parseInt(document.getElementById('loanYears').value)*12;
-let emi=(P*r*Math.pow(1+r,n))/(Math.pow(1+r,n)-1);
-document.getElementById('loanResult').innerText=`Monthly EMI: ${emi.toFixed(2)}`;
+// Savings
+function calcSavings(){
+ let p = parseFloat(document.getElementById('savingsAmount').value);
+ let r = parseFloat(document.getElementById('savingsInterest').value)/100;
+ let n = parseInt(document.getElementById('savingsYears').value);
+ if(p && r && n){
+ let total = p*Math.pow(1+r,n);
+ document.getElementById('savingsResult').innerText = `Future Savings: $${total.toFixed(2)}`;
+ } else {document.getElementById('savingsResult').innerText="Fill all fields";}
 }
 
-// 5. Love
-function calculateLove(){
-let n1=document.getElementById('name1').value.toLowerCase();
-let n2=document.getElementById('name2').value.toLowerCase();
-let score=Math.floor(Math.random()*101);
-document.getElementById('loveResult').innerText=`${n1} & ${n2} Compatibility: ${score}%`;
+// Compound Interest
+function calcCompound(){
+ let P = parseFloat(document.getElementById('ciPrincipal').value);
+ let r = parseFloat(document.getElementById('ciRate').value)/100;
+ let n = parseInt(document.getElementById('ciYears').value);
+ let f = parseInt(document.getElementById('ciFrequency').value);
+ if(P && r && n && f){
+ let A = P * Math.pow(1 + r/f, n*f);
+ document.getElementById('ciResult').innerText = `Amount after ${n} years: $${A.toFixed(2)}`;
+ } else {document.getElementById('ciResult').innerText="Fill all fields";}
 }
 
-// 6. Pregnancy
-function calculatePregnancy(){
-let last=new Date(document.getElementById('lastMenstruation').value);
-let due=new Date(last); due.setDate(due.getDate()+280);
-document.getElementById('pregnancyResult').innerText=`Estimated due date: ${due.toDateString()}`;
+// Investment Return
+function calcInvestment(){
+ let amt = parseFloat(document.getElementById('invAmount').value);
+ let rate = parseFloat(document.getElementById('invRate').value)/100;
+ let years = parseInt(document.getElementById('invYears').value);
+ if(amt && rate && years){
+ let total = amt*Math.pow(1+rate,years);
+ document.getElementById('invResult').innerText = `Expected Return: $${total.toFixed(2)}`;
+ } else {document.getElementById('invResult').innerText="Fill all fields";}
 }
 
-// 7. Ovulation
-function calculateOvulation(){
-let last=new Date(document.getElementById('lastMenstrual').value);
-let cycle=parseInt(document.getElementById('cycleOv').value) || 28;
-let ovulation=new Date(last); ovulation.setDate(ovulation.getDate()+14);
-document.getElementById('ovulationResult').innerText=`Estimated ovulation day: ${ovulation.toDateString()}`;
+// Credit Card Payoff
+function calcCCPayoff(){
+ let bal = parseFloat(document.getElementById('ccBalance').value);
+ let rate = parseFloat(document.getElementById('ccRate').value)/1200;
+ let pay = parseFloat(document.getElementById('ccPayment').value);
+ if(bal && rate && pay){
+ let months = Math.log(pay/(pay - bal*rate))/Math.log(1+rate);
+ document.getElementById('ccResult').innerText = `Payoff in ${months.toFixed(1)} months`;
+ } else {document.getElementById('ccResult').innerText="Fill all fields";}
 }
 
-// 8. Calorie
-function calculateCalories(){
-let w=parseFloat(document.getElementById('calWeight').value);
-let h=parseFloat(document.getElementById('calHeight').value);
-let a=parseInt(document.getElementById('calAge').value);
-let act=parseFloat(document.getElementById('activity').value);
-let bmr=10*w+6.25*h-5*a+5;
-let cal=Math.round(bmr*act);
-document.getElementById('calorieResult').innerText=`Daily Calories Needed: ${cal} kcal`;
+// Retirement
+function calcRetirement(){
+ let current = parseFloat(document.getElementById('retCurrent').value);
+ let monthly = parseFloat(document.getElementById('retMonthly').value);
+ let rate = parseFloat(document.getElementById('retRate').value)/100;
+ let years = parseInt(document.getElementById('retYears').value);
+ if(current && monthly && rate && years){
+ let total = current;
+ for(let i=0;i<years*12;i++){
+ total += monthly;
+ total *= (1+rate/12);
+ }
+ document.getElementById('retResult').innerText = `Projected Retirement Savings: $${total.toFixed(2)}`;
+ } else {document.getElementById('retResult').innerText="Fill all fields";}
 }
 
-// 9. Discount
-function calculateDiscount(){
-let price=parseFloat(document.getElementById('originalPrice').value);
-let discount=parseFloat(document.getElementById('discountPercent').value);
-let finalPrice=(price*(100-discount)/100).toFixed(2);
-document.getElementById('discountResult').innerText=`Final Price: $${finalPrice}`;
+// Budget
+function calcBudget(){
+ let income = parseFloat(document.getElementById('budgetIncome').value);
+ let expense = parseFloat(document.getElementById('budgetExpense').value);
+ if(income && expense){
+ let save = income - expense;
+ document.getElementById('budgetResult').innerText = `Monthly Savings: $${save.toFixed(2)}`;
+ } else {document.getElementById('budgetResult').innerText="Fill all fields";}
 }
 
-// 10. Compound Interest
-function calculateCompoundInterest(){
-let P=parseFloat(document.getElementById('ciPrincipal').value);
-let r=parseFloat(document.getElementById('ciRate').value)/100;
-let t=parseInt(document.getElementById('ciYears').value);
-let n=parseInt(document.getElementById('ciTimes').value);
-let A=P*Math.pow(1+r/n,n*t);
-document.getElementById('compoundResult').innerText=`Total Amount: ${A.toFixed(2)}`;
+// Profit Margin
+function calcProfit(){
+ let revenue = parseFloat(document.getElementById('profitRevenue').value);
+ let cost = parseFloat(document.getElementById('profitCost').value);
+ if(revenue && cost){
+ let profit = revenue - cost;
+ let margin = profit/revenue*100;
+ document.getElementById('profitResult').innerText = `Profit: $${profit.toFixed(2)}, Margin: ${margin.toFixed(2)}%`;
+ } else {document.getElementById('profitResult').innerText="Fill all fields";}
+}
+
+// Age
+function calcAge(){
+ let birth = new Date(document.getElementById('birthDate').value);
+ if(birth!="Invalid Date"){
+ let now = new Date();
+ let diff = now - birth;
+ let age = diff/(1000*60*60*24*365.25);
+ document.getElementById('ageResult').innerText = `Age: ${Math.floor(age)} years (${Math.floor(age*12)} months, ${Math.floor(age*365)} days)`;
+ } else {document.getElementById('ageResult').innerText="Select your birth date";}
+}
+
+// BMI
+function calcBMI(){
+ let w = parseFloat(document.getElementById('bmiWeight').value);
+ let h = parseFloat(document.getElementById('bmiHeight').value)/100;
+ if(w && h){
+ let bmi = w/(h*h);
+ document.getElementById('bmiResult').innerText = `BMI: ${bmi.toFixed(2)}`;
+ } else {document.getElementById('bmiResult').innerText="Fill all fields";}
 }

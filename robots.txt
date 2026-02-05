@@ -1,4 +1,3 @@
 User-agent: *
-Disallow:
-
+Allow: /
 Sitemap: https://smarttools-ai.netlify.app/sitemap.xml
