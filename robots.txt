@@ -1,3 +1,4 @@
 User-agent: *
-Allow: /
-Sitemap: https://YOUR-NETLIFY-DOMAIN/sitemap.xml
+Disallow:
+
+Sitemap: https://smarttools-ai.netlify.app/sitemap.xml

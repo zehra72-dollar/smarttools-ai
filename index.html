@@ -3,13 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SmartTools AI – Free Online Calculators & Tools</title>
-<meta name="description" content="Use 50+ free online calculators including Age, Period, BMI, Loan, Love Calculator. Fast, accurate, free.">
+<title>SmartTools AI – 10 Free Online Calculators & Tools</title>
+<meta name="description" content="10 free online calculators including Age, Period, BMI, Loan, Love, Pregnancy, Ovulation, Calorie, Discount, Compound Interest. Accurate, fast and free.">
+<meta name="keywords" content="age calculator, period calculator, BMI calculator, loan calculator, love calculator, pregnancy calculator, ovulation calculator, calorie calculator, discount calculator, compound interest calculator, free calculators online">
+<meta name="google-site-verification" content="google36a71acd6833804a.html">
 
-<!-- Google site verification (replace with your code) -->
-<meta name="google-site-verification" content="PASTE_CODE_HERE">
-
-<!-- ADSENSE (replace YOUR-ADSENSE-CODE with your code) -->
+<!-- ADSENSE -->
 <script async 
 src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=YOUR-ADSENSE-CODE"
 crossorigin="anonymous"></script>
@@ -17,12 +16,11 @@ crossorigin="anonymous"></script>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
 <header>
-<h1>SmartTools AI</h1>
-<p>50+ Free Calculators & Smart Tools</p>
+<h1 class="neon-text">SmartTools AI</h1>
+<p class="neon-subtext">10 Free Calculators & Smart Tools</p>
 <nav>
-<a href="index.html">Home</a>
+<a href="#toc">Jump to Calculator</a>
 <a href="blog.html">Blog</a>
 <a href="about.html">About</a>
 <a href="contact.html">Contact</a>
@@ -31,16 +29,33 @@ crossorigin="anonymous"></script>
 
 <div class="container">
 
-<!-- AGE CALCULATOR -->
-<div class="tool">
+<!-- Table of Contents -->
+<div id="toc" class="tool">
+<h2>Jump to Your Calculator</h2>
+<ul>
+<li><a href="#calc1">Age Calculator</a></li>
+<li><a href="#calc2">Period Calculator</a></li>
+<li><a href="#calc3">BMI Calculator</a></li>
+<li><a href="#calc4">Loan EMI Calculator</a></li>
+<li><a href="#calc5">Love Calculator</a></li>
+<li><a href="#calc6">Pregnancy Calculator</a></li>
+<li><a href="#calc7">Ovulation Calculator</a></li>
+<li><a href="#calc8">Calorie Calculator</a></li>
+<li><a href="#calc9">Discount Calculator</a></li>
+<li><a href="#calc10">Compound Interest Calculator</a></li>
+</ul>
+</div>
+
+<!-- 1. Age Calculator -->
+<div class="tool" id="calc1">
 <h2>Age Calculator</h2>
 <input type="date" id="dob">
 <button onclick="calculateAge()">Calculate</button>
 <p id="ageResult"></p>
 </div>
 
-<!-- PERIOD CALCULATOR -->
-<div class="tool">
+<!-- 2. Period Calculator -->
+<div class="tool" id="calc2">
 <h2>Period Calculator</h2>
 <input type="date" id="lastPeriod">
 <input type="number" id="cycleLength" placeholder="Cycle Length (28)">
@@ -48,8 +63,8 @@ crossorigin="anonymous"></script>
 <p id="periodResult"></p>
 </div>
 
-<!-- BMI CALCULATOR -->
-<div class="tool">
+<!-- 3. BMI Calculator -->
+<div class="tool" id="calc3">
 <h2>BMI Calculator</h2>
 <input type="number" id="weight" placeholder="Weight kg">
 <input type="number" id="height" placeholder="Height cm">
@@ -57,14 +72,77 @@ crossorigin="anonymous"></script>
 <p id="bmiResult"></p>
 </div>
 
-<!-- LOAN EMI CALCULATOR -->
-<div class="tool">
+<!-- 4. Loan EMI -->
+<div class="tool" id="calc4">
 <h2>Loan EMI Calculator</h2>
 <input type="number" id="loanAmount" placeholder="Loan Amount">
 <input type="number" id="interestRate" placeholder="Interest %">
 <input type="number" id="loanYears" placeholder="Years">
 <button onclick="calculateLoan()">Calculate EMI</button>
 <p id="loanResult"></p>
+</div>
+
+<!-- 5. Love Calculator -->
+<div class="tool" id="calc5">
+<h2>Love Calculator</h2>
+<input type="text" id="name1" placeholder="Your Name">
+<input type="text" id="name2" placeholder="Partner Name">
+<button onclick="calculateLove()">Check</button>
+<p id="loveResult"></p>
+</div>
+
+<!-- 6. Pregnancy -->
+<div class="tool" id="calc6">
+<h2>Pregnancy Calculator</h2>
+<input type="date" id="lastMenstruation">
+<button onclick="calculatePregnancy()">Calculate</button>
+<p id="pregnancyResult"></p>
+</div>
+
+<!-- 7. Ovulation -->
+<div class="tool" id="calc7">
+<h2>Ovulation Calculator</h2>
+<input type="date" id="lastMenstrual">
+<input type="number" id="cycleOv" placeholder="Cycle Length (28)">
+<button onclick="calculateOvulation()">Predict</button>
+<p id="ovulationResult"></p>
+</div>
+
+<!-- 8. Calorie -->
+<div class="tool" id="calc8">
+<h2>Calorie Calculator</h2>
+<input type="number" id="calWeight" placeholder="Weight kg">
+<input type="number" id="calHeight" placeholder="Height cm">
+<input type="number" id="calAge" placeholder="Age">
+<select id="activity">
+<option value="1.2">Sedentary</option>
+<option value="1.375">Lightly Active</option>
+<option value="1.55">Moderately Active</option>
+<option value="1.725">Very Active</option>
+<option value="1.9">Extra Active</option>
+</select>
+<button onclick="calculateCalories()">Calculate</button>
+<p id="calorieResult"></p>
+</div>
+
+<!-- 9. Discount -->
+<div class="tool" id="calc9">
+<h2>Discount Calculator</h2>
+<input type="number" id="originalPrice" placeholder="Original Price">
+<input type="number" id="discountPercent" placeholder="Discount %">
+<button onclick="calculateDiscount()">Calculate</button>
+<p id="discountResult"></p>
+</div>
+
+<!-- 10. Compound Interest -->
+<div class="tool" id="calc10">
+<h2>Compound Interest Calculator</h2>
+<input type="number" id="ciPrincipal" placeholder="Principal Amount">
+<input type="number" id="ciRate" placeholder="Interest Rate %">
+<input type="number" id="ciYears" placeholder="Years">
+<input type="number" id="ciTimes" placeholder="Times Compounded/Year">
+<button onclick="calculateCompoundInterest()">Calculate</button>
+<p id="compoundResult"></p>
 </div>
 
 </div>
