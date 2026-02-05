@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>SmartTools AI</title>
-<meta name="description" content="50+ free high RPM calculators including Loan EMI, Mortgage, Salary, Savings, Compound Interest, Investment Return, Retirement, Budget, Profit, Age, BMI and more.">
+<meta name="description" content="12 free high RPM calculators including Loan EMI, Mortgage, Salary, Savings, Compound Interest, Investment Return, Retirement, Budget, Profit, Age, BMI and more.">
 <meta name="google-site-verification" content="RvWCHqNSU_SF58JnpTCYcNG1Y4Xn5e-3o6mU9WYtA6c" />
 <link rel="stylesheet" href="style.css">
 
@@ -26,131 +26,104 @@
 
 <main class="hero">
 <h2>High RPM Calculators</h2>
-<p>Click on any calculator below to jump directly to it and get detailed results instantly.</p>
+<p>Welcome! Use our free calculators for finance, budgeting, health, and more. Get detailed results instantly.</p>
 
-<div class="grid">
-
-<!-- Calculator Links -->
-<div class="card"><h3>1️⃣ Loan EMI</h3><a href="#loan-emi">Go</a></div>
-<div class="card"><h3>2️⃣ Mortgage</h3><a href="#mortgage">Go</a></div>
-<div class="card"><h3>3️⃣ Salary</h3><a href="#salary">Go</a></div>
-<div class="card"><h3>4️⃣ Savings</h3><a href="#savings">Go</a></div>
-<div class="card"><h3>5️⃣ Compound Interest</h3><a href="#compound-interest">Go</a></div>
-<div class="card"><h3>6️⃣ Investment Return</h3><a href="#investment">Go</a></div>
-<div class="card"><h3>7️⃣ Credit Card Payoff</h3><a href="#credit-card">Go</a></div>
-<div class="card"><h3>8️⃣ Retirement</h3><a href="#retirement">Go</a></div>
-<div class="card"><h3>9️⃣ Budget Planner</h3><a href="#budget">Go</a></div>
-<div class="card"><h3>🔟 Profit Margin</h3><a href="#profit-margin">Go</a></div>
-<div class="card"><h3>11️⃣ Age</h3><a href="#age">Go</a></div>
-<div class="card"><h3>12️⃣ BMI</h3><a href="#bmi">Go</a></div>
-
+<!-- ===== Jump Box with all calculators ===== -->
+<div class="calculator-jump-box">
+<button onclick="document.querySelector('#loan-emi').scrollIntoView({behavior:'smooth'})">1️⃣ Loan EMI</button>
+<button onclick="document.querySelector('#mortgage').scrollIntoView({behavior:'smooth'})">2️⃣ Mortgage</button>
+<button onclick="document.querySelector('#salary').scrollIntoView({behavior:'smooth'})">3️⃣ Salary</button>
+<button onclick="document.querySelector('#savings').scrollIntoView({behavior:'smooth'})">4️⃣ Savings</button>
+<button onclick="document.querySelector('#compound-interest').scrollIntoView({behavior:'smooth'})">5️⃣ Compound Interest</button>
+<button onclick="document.querySelector('#investment').scrollIntoView({behavior:'smooth'})">6️⃣ Investment Return</button>
+<button onclick="document.querySelector('#credit-card').scrollIntoView({behavior:'smooth'})">7️⃣ Credit Card Payoff</button>
+<button onclick="document.querySelector('#retirement').scrollIntoView({behavior:'smooth'})">8️⃣ Retirement</button>
+<button onclick="document.querySelector('#budget').scrollIntoView({behavior:'smooth'})">9️⃣ Budget Planner</button>
+<button onclick="document.querySelector('#profit-margin').scrollIntoView({behavior:'smooth'})">🔟 Profit Margin</button>
+<button onclick="document.querySelector('#age').scrollIntoView({behavior:'smooth'})">11️⃣ Age</button>
+<button onclick="document.querySelector('#bmi').scrollIntoView({behavior:'smooth'})">12️⃣ BMI</button>
 </div>
 
-<!-- Calculators Sections -->
-<section id="loan-emi">
-<h3>Loan EMI Calculator</h3>
-<p>Enter principal, rate, months:</p>
+<!-- ===== Calculators Sections ===== -->
+<section id="loan-emi"><h3>Loan EMI Calculator</h3>
 <input type="number" id="loanPrincipal" placeholder="Principal">
 <input type="number" id="loanRate" placeholder="Annual Interest Rate (%)">
 <input type="number" id="loanMonths" placeholder="Months">
 <button onclick="showLoanEMI()">Calculate EMI</button>
-<p id="loanResult"></p>
-</section>
+<p id="loanResult"></p></section>
 
-<section id="mortgage">
-<h3>Mortgage Calculator</h3>
+<section id="mortgage"><h3>Mortgage Calculator</h3>
 <input type="number" id="mortgagePrincipal" placeholder="Principal">
 <input type="number" id="mortgageRate" placeholder="Annual Interest Rate (%)">
 <input type="number" id="mortgageYears" placeholder="Years">
 <button onclick="showMortgage()">Calculate</button>
-<p id="mortgageResult"></p>
-</section>
+<p id="mortgageResult"></p></section>
 
-<section id="salary">
-<h3>Salary Calculator</h3>
+<section id="salary"><h3>Salary Calculator</h3>
 <input type="number" id="grossSalary" placeholder="Gross Salary">
 <input type="number" id="deductions" placeholder="Deductions">
 <input type="number" id="taxRate" placeholder="Tax Rate (%)">
 <button onclick="showSalary()">Calculate</button>
-<p id="salaryResult"></p>
-</section>
+<p id="salaryResult"></p></section>
 
-<section id="savings">
-<h3>Savings Calculator</h3>
+<section id="savings"><h3>Savings Calculator</h3>
 <input type="number" id="monthlySaving" placeholder="Monthly Savings">
 <input type="number" id="savingMonths" placeholder="Months">
 <input type="number" id="savingRate" placeholder="Interest Rate (%)">
 <button onclick="showSavings()">Calculate</button>
-<p id="savingsResult"></p>
-</section>
+<p id="savingsResult"></p></section>
 
-<section id="compound-interest">
-<h3>Compound Interest Calculator</h3>
+<section id="compound-interest"><h3>Compound Interest Calculator</h3>
 <input type="number" id="compoundPrincipal" placeholder="Principal">
 <input type="number" id="compoundRate" placeholder="Annual Rate (%)">
 <input type="number" id="compoundYears" placeholder="Years">
 <button onclick="showCompound()">Calculate</button>
-<p id="compoundResult"></p>
-</section>
+<p id="compoundResult"></p></section>
 
-<section id="investment">
-<h3>Investment Return Calculator</h3>
+<section id="investment"><h3>Investment Return Calculator</h3>
 <input type="number" id="investPrincipal" placeholder="Principal">
 <input type="number" id="investRate" placeholder="Annual Rate (%)">
 <input type="number" id="investYears" placeholder="Years">
 <button onclick="showInvestment()">Calculate</button>
-<p id="investmentResult"></p>
-</section>
+<p id="investmentResult"></p></section>
 
-<section id="credit-card">
-<h3>Credit Card Payoff Calculator</h3>
+<section id="credit-card"><h3>Credit Card Payoff Calculator</h3>
 <input type="number" id="creditBalance" placeholder="Balance">
 <input type="number" id="creditPayment" placeholder="Monthly Payment">
 <input type="number" id="creditRate" placeholder="Interest Rate (%)">
 <button onclick="showCreditPayoff()">Calculate</button>
-<p id="creditResult"></p>
-</section>
+<p id="creditResult"></p></section>
 
-<section id="retirement">
-<h3>Retirement Calculator</h3>
+<section id="retirement"><h3>Retirement Calculator</h3>
 <input type="number" id="currentAge" placeholder="Current Age">
 <input type="number" id="retireAge" placeholder="Retirement Age">
 <input type="number" id="monthlyRetirement" placeholder="Monthly Savings">
 <input type="number" id="retirementRate" placeholder="Annual Rate (%)">
 <button onclick="showRetirement()">Calculate</button>
-<p id="retirementResult"></p>
-</section>
+<p id="retirementResult"></p></section>
 
-<section id="budget">
-<h3>Budget Planner</h3>
+<section id="budget"><h3>Budget Planner</h3>
 <input type="number" id="income" placeholder="Monthly Income">
 <input type="text" id="expenses" placeholder="Comma separated expenses">
 <button onclick="showBudget()">Calculate</button>
-<p id="budgetResult"></p>
-</section>
+<p id="budgetResult"></p></section>
 
-<section id="profit-margin">
-<h3>Profit Margin Calculator</h3>
+<section id="profit-margin"><h3>Profit Margin Calculator</h3>
 <input type="number" id="cost" placeholder="Cost Price">
 <input type="number" id="sellingPrice" placeholder="Selling Price">
 <button onclick="showProfitMargin()">Calculate</button>
-<p id="profitResult"></p>
-</section>
+<p id="profitResult"></p></section>
 
-<section id="age">
-<h3>Age Calculator</h3>
+<section id="age"><h3>Age Calculator</h3>
 <input type="date" id="birthDate">
 <button onclick="showAge()">Calculate</button>
-<p id="ageResult"></p>
-</section>
+<p id="ageResult"></p></section>
 
-<section id="bmi">
-<h3>BMI Calculator</h3>
+<section id="bmi"><h3>BMI Calculator</h3>
 <input type="number" id="weight" placeholder="Weight (kg)">
 <input type="number" id="height" placeholder="Height (cm)">
 <button onclick="showBMI()">Calculate</button>
-<p id="bmiResult"></p>
-</section>
+<p id="bmiResult"></p></section>
 
 <footer>
 <p>© 2026 SmartTools AI | smarttools.ai@gmail.com</p>
@@ -160,109 +133,6 @@
 </footer>
 
 <script src="script.js"></script>
-
-<script>
-// ===== Smooth scroll for links =====
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e){
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
-    });
-});
-
-// ===== Calculator display functions =====
-function showLoanEMI(){
-    let p = +document.getElementById('loanPrincipal').value;
-    let r = +document.getElementById('loanRate').value;
-    let m = +document.getElementById('loanMonths').value;
-    let res = calc.loanEMI(p,r,m);
-    document.getElementById('loanResult').innerText = `EMI: ${res.EMI}, Total Payment: ${res.TotalPayment}, Total Interest: ${res.TotalInterest}`;
-}
-
-function showMortgage(){
-    let p = +document.getElementById('mortgagePrincipal').value;
-    let r = +document.getElementById('mortgageRate').value;
-    let y = +document.getElementById('mortgageYears').value;
-    let res = calc.mortgage(p,r,y);
-    document.getElementById('mortgageResult').innerText = `EMI: ${res.EMI}, Total Payment: ${res.TotalPayment}, Total Interest: ${res.TotalInterest}`;
-}
-
-function showSalary(){
-    let gross = +document.getElementById('grossSalary').value;
-    let deductions = +document.getElementById('deductions').value;
-    let taxRate = +document.getElementById('taxRate').value;
-    let res = calc.salary(gross,deductions,taxRate);
-    document.getElementById('salaryResult').innerText = `Gross: ${res.Gross}, Tax: ${res.Tax}, Net: ${res.Net}`;
-}
-
-function showSavings(){
-    let monthly = +document.getElementById('monthlySaving').value;
-    let months = +document.getElementById('savingMonths').value;
-    let rate = +document.getElementById('savingRate').value;
-    let res = calc.savings(monthly,months,rate);
-    document.getElementById('savingsResult').innerText = `Total Savings: ${res}`;
-}
-
-function showCompound(){
-    let p = +document.getElementById('compoundPrincipal').value;
-    let r = +document.getElementById('compoundRate').value;
-    let y = +document.getElementById('compoundYears').value;
-    let res = calc.compound(p,r,y);
-    document.getElementById('compoundResult').innerText = `Principal: ${res.Principal}, Amount: ${res.Amount}, Interest: ${res.Interest}`;
-}
-
-function showInvestment(){
-    let p = +document.getElementById('investPrincipal').value;
-    let r = +document.getElementById('investRate').value;
-    let y = +document.getElementById('investYears').value;
-    let res = calc.investment(p,r,y);
-    document.getElementById('investmentResult').innerText = `Principal: ${res.Principal}, Amount: ${res.Amount}, Interest: ${res.Interest}`;
-}
-
-function showCreditPayoff(){
-    let b = +document.getElementById('creditBalance').value;
-    let m = +document.getElementById('creditPayment').value;
-    let r = +document.getElementById('creditRate').value;
-    let res = calc.creditPayoff(b,m,r);
-    document.getElementById('creditResult').innerText = `Months: ${res.Months}, Total Paid: ${res.TotalPaid}, Interest Paid: ${res.InterestPaid}`;
-}
-
-function showRetirement(){
-    let ca = +document.getElementById('currentAge').value;
-    let ra = +document.getElementById('retireAge').value;
-    let ms = +document.getElementById('monthlyRetirement').value;
-    let rate = +document.getElementById('retirementRate').value;
-    let res = calc.retirement(ca,ra,ms,rate);
-    document.getElementById('retirementResult').innerText = `Future Value: ${res}`;
-}
-
-function showBudget(){
-    let income = +document.getElementById('income').value;
-    let expenses = document.getElementById('expenses').value.split(',').map(Number);
-    let res = calc.budget(income,expenses);
-    document.getElementById('budgetResult').innerText = `Income: ${res.Income}, Expenses: ${res.Expenses}, Balance: ${res.Balance}`;
-}
-
-function showProfitMargin(){
-    let cost = +document.getElementById('cost').value;
-    let sp = +document.getElementById('sellingPrice').value;
-    let res = calc.profitMargin(cost,sp);
-    document.getElementById('profitResult').innerText = `Profit: ${res.Profit}, Margin: ${res.Margin}%`;
-}
-
-function showAge(){
-    let bd = document.getElementById('birthDate').value;
-    let res = calc.age(bd);
-    document.getElementById('ageResult').innerText = `Years: ${res.Years}, Months: ${res.Months}, Days: ${res.Days}, Hours: ${res.Hours}, Minutes: ${res.Minutes}, Seconds: ${res.Seconds}`;
-}
-
-function showBMI(){
-    let w = +document.getElementById('weight').value;
-    let h = +document.getElementById('height').value;
-    let res = calc.bmi(w,h);
-    document.getElementById('bmiResult').innerText = `BMI: ${res.BMI}, Category: ${res.Category}`;
-}
-</script>
 
 </body>
 </html>
