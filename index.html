@@ -3,127 +3,179 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SmartTools AI</title>
-<meta name="description" content="12 free high RPM calculators including Loan EMI, Mortgage, Salary, Savings, Compound Interest, Investment Return, Retirement, Budget, Profit, Age, BMI and more.">
+<title>SmartTools AI – 12 High RPM Calculators 💡</title>
+<meta name="description" content="SmartTools AI offers 12 interactive high-value calculators: Loan EMI, Mortgage, Salary, Savings, Compound Interest, Investment Return, Credit Card Payoff, Retirement, Budget Planner, Profit Margin, Age, BMI. Free, detailed, premium tools.">
 <meta name="google-site-verification" content="RvWCHqNSU_SF58JnpTCYcNG1Y4Xn5e-3o6mU9WYtA6c" />
-<link rel="stylesheet" href="style.css">
 
 <!-- AdSense -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9272234322215498"
      crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header>
 <h1>SmartTools AI</h1>
 <nav>
-<a href="index.html">Home</a>
+<a href="#jump-box">Quick Tools</a>
 <a href="blog.html">Blog</a>
 <a href="about.html">About</a>
 <a href="contact.html">Contact</a>
 </nav>
 </header>
 
-<main class="hero">
-<h2>High RPM Calculators</h2>
-<p>Welcome! Use our free calculators for finance, budgeting, health, and more. Get detailed results instantly.</p>
+<main>
 
-<!-- ===== Jump Box with all calculators ===== -->
-<div class="calculator-jump-box">
-<button onclick="document.querySelector('#loan-emi').scrollIntoView({behavior:'smooth'})">1️⃣ Loan EMI</button>
-<button onclick="document.querySelector('#mortgage').scrollIntoView({behavior:'smooth'})">2️⃣ Mortgage</button>
-<button onclick="document.querySelector('#salary').scrollIntoView({behavior:'smooth'})">3️⃣ Salary</button>
-<button onclick="document.querySelector('#savings').scrollIntoView({behavior:'smooth'})">4️⃣ Savings</button>
-<button onclick="document.querySelector('#compound-interest').scrollIntoView({behavior:'smooth'})">5️⃣ Compound Interest</button>
-<button onclick="document.querySelector('#investment').scrollIntoView({behavior:'smooth'})">6️⃣ Investment Return</button>
-<button onclick="document.querySelector('#credit-card').scrollIntoView({behavior:'smooth'})">7️⃣ Credit Card Payoff</button>
-<button onclick="document.querySelector('#retirement').scrollIntoView({behavior:'smooth'})">8️⃣ Retirement</button>
-<button onclick="document.querySelector('#budget').scrollIntoView({behavior:'smooth'})">9️⃣ Budget Planner</button>
-<button onclick="document.querySelector('#profit-margin').scrollIntoView({behavior:'smooth'})">🔟 Profit Margin</button>
-<button onclick="document.querySelector('#age').scrollIntoView({behavior:'smooth'})">11️⃣ Age</button>
-<button onclick="document.querySelector('#bmi').scrollIntoView({behavior:'smooth'})">12️⃣ BMI</button>
+<section class="hero">
+<h2>💡 12 Must-Have High RPM Calculators</h2>
+<p>Get instant, detailed results to manage money, health, and life. Click any tool below to jump directly to it.</p>
+
+<!-- Jump Box -->
+<div id="jump-box" class="calculator-jump-box">
+<a href="#loan-emi">Loan EMI</a> - 
+<a href="#mortgage">Mortgage</a> - 
+<a href="#salary">Salary</a> - 
+<a href="#savings">Savings</a> - 
+<a href="#compound-interest">Compound Interest</a> - 
+<a href="#investment">Investment Return</a> - 
+<a href="#credit-card">Credit Card Payoff</a> - 
+<a href="#retirement">Retirement</a> - 
+<a href="#budget">Budget Planner</a> - 
+<a href="#profit-margin">Profit Margin</a> - 
+<a href="#age">Age</a> - 
+<a href="#bmi">BMI</a>
 </div>
 
-<!-- ===== Calculators Sections ===== -->
-<section id="loan-emi"><h3>Loan EMI Calculator</h3>
-<input type="number" id="loanPrincipal" placeholder="Principal">
-<input type="number" id="loanRate" placeholder="Annual Interest Rate (%)">
-<input type="number" id="loanMonths" placeholder="Months">
+<!-- AdSense Banner Top -->
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-client="ca-pub-9272234322215498"
+     data-ad-slot="1234567890"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<!-- ===== Calculators ===== -->
+
+<section id="loan-emi">
+<h3>1️⃣ Loan EMI Calculator</h3>
+<input type="number" id="loanPrincipal" placeholder="Loan Amount">
+<input type="number" id="loanRate" placeholder="Annual Interest %">
+<input type="number" id="loanMonths" placeholder="Duration in Months">
 <button onclick="showLoanEMI()">Calculate EMI</button>
-<p id="loanResult"></p></section>
+<p id="loanResult"></p>
+</section>
 
-<section id="mortgage"><h3>Mortgage Calculator</h3>
-<input type="number" id="mortgagePrincipal" placeholder="Principal">
-<input type="number" id="mortgageRate" placeholder="Annual Interest Rate (%)">
-<input type="number" id="mortgageYears" placeholder="Years">
-<button onclick="showMortgage()">Calculate</button>
-<p id="mortgageResult"></p></section>
+<section id="mortgage">
+<h3>2️⃣ Mortgage Calculator</h3>
+<input type="number" id="mortgagePrincipal" placeholder="Loan Amount">
+<input type="number" id="mortgageRate" placeholder="Annual Interest %">
+<input type="number" id="mortgageYears" placeholder="Duration in Years">
+<button onclick="showMortgage()">Calculate Mortgage</button>
+<p id="mortgageResult"></p>
+</section>
 
-<section id="salary"><h3>Salary Calculator</h3>
+<section id="salary">
+<h3>3️⃣ Salary Calculator</h3>
 <input type="number" id="grossSalary" placeholder="Gross Salary">
 <input type="number" id="deductions" placeholder="Deductions">
-<input type="number" id="taxRate" placeholder="Tax Rate (%)">
-<button onclick="showSalary()">Calculate</button>
-<p id="salaryResult"></p></section>
+<input type="number" id="taxRate" placeholder="Tax Rate %">
+<button onclick="showSalary()">Calculate Net Salary</button>
+<p id="salaryResult"></p>
+</section>
 
-<section id="savings"><h3>Savings Calculator</h3>
-<input type="number" id="monthlySaving" placeholder="Monthly Savings">
-<input type="number" id="savingMonths" placeholder="Months">
-<input type="number" id="savingRate" placeholder="Interest Rate (%)">
-<button onclick="showSavings()">Calculate</button>
-<p id="savingsResult"></p></section>
+<section id="savings">
+<h3>4️⃣ Savings Calculator</h3>
+<input type="number" id="monthlySaving" placeholder="Monthly Saving">
+<input type="number" id="savingMonths" placeholder="Number of Months">
+<input type="number" id="savingRate" placeholder="Interest Rate %">
+<button onclick="showSavings()">Calculate Savings</button>
+<p id="savingsResult"></p>
+</section>
 
-<section id="compound-interest"><h3>Compound Interest Calculator</h3>
-<input type="number" id="compoundPrincipal" placeholder="Principal">
-<input type="number" id="compoundRate" placeholder="Annual Rate (%)">
-<input type="number" id="compoundYears" placeholder="Years">
-<button onclick="showCompound()">Calculate</button>
-<p id="compoundResult"></p></section>
+<section id="compound-interest">
+<h3>5️⃣ Compound Interest Calculator</h3>
+<input type="number" id="compoundPrincipal" placeholder="Principal Amount">
+<input type="number" id="compoundRate" placeholder="Annual Interest %">
+<input type="number" id="compoundYears" placeholder="Number of Years">
+<button onclick="showCompound()">Calculate Compound Interest</button>
+<p id="compoundResult"></p>
+</section>
 
-<section id="investment"><h3>Investment Return Calculator</h3>
-<input type="number" id="investPrincipal" placeholder="Principal">
-<input type="number" id="investRate" placeholder="Annual Rate (%)">
-<input type="number" id="investYears" placeholder="Years">
-<button onclick="showInvestment()">Calculate</button>
-<p id="investmentResult"></p></section>
+<section id="investment">
+<h3>6️⃣ Investment Return Calculator</h3>
+<input type="number" id="investPrincipal" placeholder="Principal Amount">
+<input type="number" id="investRate" placeholder="Annual Return %">
+<input type="number" id="investYears" placeholder="Number of Years">
+<button onclick="showInvestment()">Calculate Investment</button>
+<p id="investmentResult"></p>
+</section>
 
-<section id="credit-card"><h3>Credit Card Payoff Calculator</h3>
+<section id="credit-card">
+<h3>7️⃣ Credit Card Payoff Calculator</h3>
 <input type="number" id="creditBalance" placeholder="Balance">
 <input type="number" id="creditPayment" placeholder="Monthly Payment">
-<input type="number" id="creditRate" placeholder="Interest Rate (%)">
-<button onclick="showCreditPayoff()">Calculate</button>
-<p id="creditResult"></p></section>
+<input type="number" id="creditRate" placeholder="Interest Rate %">
+<button onclick="showCreditPayoff()">Calculate Payoff</button>
+<p id="creditResult"></p>
+</section>
 
-<section id="retirement"><h3>Retirement Calculator</h3>
+<section id="retirement">
+<h3>8️⃣ Retirement Calculator</h3>
 <input type="number" id="currentAge" placeholder="Current Age">
 <input type="number" id="retireAge" placeholder="Retirement Age">
-<input type="number" id="monthlyRetirement" placeholder="Monthly Savings">
-<input type="number" id="retirementRate" placeholder="Annual Rate (%)">
-<button onclick="showRetirement()">Calculate</button>
-<p id="retirementResult"></p></section>
+<input type="number" id="monthlyRetirement" placeholder="Monthly Saving">
+<input type="number" id="retirementRate" placeholder="Interest Rate %">
+<button onclick="showRetirement()">Calculate Retirement</button>
+<p id="retirementResult"></p>
+</section>
 
-<section id="budget"><h3>Budget Planner</h3>
-<input type="number" id="income" placeholder="Monthly Income">
-<input type="text" id="expenses" placeholder="Comma separated expenses">
-<button onclick="showBudget()">Calculate</button>
-<p id="budgetResult"></p></section>
+<section id="budget">
+<h3>9️⃣ Budget Planner</h3>
+<input type="number" id="income" placeholder="Income">
+<input type="text" id="expenses" placeholder="Expenses (comma separated)">
+<button onclick="showBudget()">Calculate Budget</button>
+<p id="budgetResult"></p>
+</section>
 
-<section id="profit-margin"><h3>Profit Margin Calculator</h3>
+<section id="profit-margin">
+<h3>🔟 Profit Margin Calculator</h3>
 <input type="number" id="cost" placeholder="Cost Price">
 <input type="number" id="sellingPrice" placeholder="Selling Price">
-<button onclick="showProfitMargin()">Calculate</button>
-<p id="profitResult"></p></section>
+<button onclick="showProfitMargin()">Calculate Profit</button>
+<p id="profitResult"></p>
+</section>
 
-<section id="age"><h3>Age Calculator</h3>
-<input type="date" id="birthDate">
-<button onclick="showAge()">Calculate</button>
-<p id="ageResult"></p></section>
+<section id="age">
+<h3>11️⃣ Age Calculator</h3>
+<input type="date" id="birthDate" placeholder="Date of Birth">
+<button onclick="showAge()">Calculate Age</button>
+<p id="ageResult"></p>
+</section>
 
-<section id="bmi"><h3>BMI Calculator</h3>
+<section id="bmi">
+<h3>12️⃣ BMI Calculator</h3>
 <input type="number" id="weight" placeholder="Weight (kg)">
 <input type="number" id="height" placeholder="Height (cm)">
-<button onclick="showBMI()">Calculate</button>
-<p id="bmiResult"></p></section>
+<button onclick="showBMI()">Calculate BMI</button>
+<p id="bmiResult"></p>
+</section>
+
+<!-- AdSense Banner Bottom -->
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-client="ca-pub-9272234322215498"
+     data-ad-slot="9876543210"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+</main>
 
 <footer>
 <p>© 2026 SmartTools AI | smarttools.ai@gmail.com</p>
@@ -133,6 +185,5 @@
 </footer>
 
 <script src="script.js"></script>
-
 </body>
 </html>
